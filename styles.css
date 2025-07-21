@@ -1,0 +1,196 @@
+/* general items */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(0, 5%, 80%);
+    background-image: url("asset/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Open Sans', 'Merriweather', 'Arial';
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+/* navbar for web browsers */
+nav {
+    background-color: hsla(0, 0%, 100%, 0.6);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Bebas Neue', 'Roboto', 'Open Sans', 'Arial';
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #000;
+    text-shadow: 1px 1px 2px #b0b0be;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+nav a:active {
+    background-color: #6d6d6d;
+}
+
+/* sidebar navbar for mobile */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    z-index: 999;
+    background-color: #ffffff75;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+/* hero section with introduction */
+header {
+    background-color: hsla(0, 100%, 100%, 0.8);
+    align-items: center;
+    margin: 100px 100px;
+    display: flex;
+    box-shadow: 5px 5px 2px #000;
+    overflow: wrap;
+    padding: 50px;
+}
+
+.introduction-text {
+    display: inline-block;
+    font-family: 'Bebas Neue', 'Metrophobic', 'Roboto', 'Open Sans', 'Arial';
+    text-align: left;
+    align-items: center !important;
+    width: 65%;
+    height: 100%;
+    margin: 80px auto;
+}
+
+#hero h2 {
+    font-size: 36px;
+}
+
+#hero h1 {
+    font-size: 72px;
+}
+
+#hero p {
+    font-size: 24px;
+}
+
+.short-description {
+    font-family: 'TikTok Sans';
+    letter-spacing: 0px;
+    font-size: small;
+    overflow: hidden;
+}
+
+.portrait {
+    display: relative;
+    vertical-align: top;
+    border-radius: 50%;
+    border: 1px solid #3d3d3d;
+    box-shadow: 0px 0px 15px #0f0f0f;
+    align-items: center;
+    vertical-align: middle;
+    width: 375px;
+    margin: 20px 30px 30px 50px;
+}
+
+.section-title {
+    font-family: 'Bebas Neue', 'Roboto', 'Open Sans', 'Arial';
+}
+
+#about {
+    display: block;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+#about p {
+    width: 100%;
+    font-family: 'Roboto', 'Open Sans', 'Arial';
+    line-height: 22px;
+    margin: 10px auto;
+}
+
+footer {
+    display: block;
+    background-color: #f0f0f0f0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+.contact-information {
+    display: block;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    text-align: center;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- head data -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Metrophobic&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Duy Nguyen | Portfolio</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <!-- sidebar for mobile -->
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills and Tools</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- navbar for web browsers -->
+        <ul>
+            <li><a href="#">Duy | Front-End Developer</a></li>
+            <li class="hideOnMobile"><a href="#about">About</a></li>
+            <li class="hideOnMobile"><a href="#experience">Experience</a></li>
+            <li class="hideOnMobile"><a href="#projects">Projects</a></li>
+            <li class="hideOnMobile"><a href="#skills">Skills and Tools</a></li>
+            <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+
+    </nav>
+
+    <!-- hero section with image and short text -->
+    <header id="hero">
+        <img class="portrait" src="asset/duy_pic.jpg" alt="Picture of Duy Nguyen">
+        <div class="introduction-text">
+            <h2>Hello, I am</h2>
+            <h1>Duy Nguyen </h1>
+            <p>A Front-End developer and UI/UX designer</p>
+            <div class="short-description">
+            <br>
+            <p>
+                Innovative Front-end Web developer and designer, who is tired of monotonous and poor UX designs. 
+                Turning beautiful, complex and interesting ideas into great designs come to life! Specializing in Front-End web development, theme creation and more. 
+                Building responsive, high-performance web applications with React, still learning and attempting to use new technologies.
+            </p>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- about section with more details and professional summary -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            Growing up in San Francisco for almost all of my life in an immigrant family, my parents were not always readily available to take care of me when the need arose. 
+            I grew interested in learning about tech from playing video games when I grew up, mostly playing on a Playstation 2 that was originally gifted to my sister but 
+            she hardly really used it. Afterwards, I started gaining interest in using a computer, where I learned about PC gaming and did all the tips and tricks to try 
+            to run current and popular games at the time on a very low-spec office-style computer.  As I was in high school, they were offering Computer Science courses, 
+            one that taught the basics using Scratch and one that was an AP class learning the how to program with Java. Going into San Francisco State University, I wanted 
+            to try to diversify since Computer Science was beginning to become impacted and more people had interested so I decided to do Computer Engineering. After graduating while 
+            COVID-19 was still forcing people at home, it was very tough to find jobs out the market until I was able to land one as a helpdesk technician. At this time, I realized 
+            my passion was still in programming and software engineering but Java was just not as fun, so I decided to step into learning front-end with HTML/CSS and React and while I 
+            am self-taught using things like Codecademy, I am still learning but quick to adapting to building new ideas.
+        </p>
+    </section>
+
+    <section id="experience">
+
+    </section>
+
+    <!-- contact info with links -->
+    <footer id="contact-info">
+        <div class="contact-information">
+            <p>Email: dcnguyen233@gmail.com</p>
+            <p>Phone Number: +1(415)730-4930</p>
+        </div>
+    </footer>
+
+    <!-- js script for toggling sidebar for mobile -->
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+
+        function showSidebar() {
+            sidebar.style.display = 'flex';
+        }
+
+        function hideSidebar() {
+            sidebar.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+
+</html>
