@@ -1,5 +1,5 @@
 # Duy's Simple Portfolio
-A simple version of my portfolio
+A simple version of my portfolio, see it live here https://duynguyen2.github.io/portfolio_simple/
 
 It utilizes vanilla HTML/CSS to create a sleek simple looks with some effects. I do realize that I added some animations in places that may make it seem inconsistent with the rest of the page but I was mostly proud of being able to complete it, and I may work to implement it in the future as this is on-going. The design I had was inspired by various portfolios that I skimmed from another repository from here, https://github.com/emmabostian/developer-portfolios. I hope to use this as a general basis, so that I may refactor a different version of this using different API libraries and tech stacks like the ones listed on it. This is the portfolio I will be using to show off for now until I fully implement more.
 
