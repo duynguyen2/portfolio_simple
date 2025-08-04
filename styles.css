@@ -1,7 +1,7 @@
 /* general items */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -11,8 +11,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     font-family: 'Open Sans', 'Merriweather', 'Arial';
-    margin: 0;
-    padding: 0;
+    margin: 0px auto;
+    padding: 0px;
     min-height: 100%;
     width: 100%;
     letter-spacing: 1px;
@@ -64,7 +64,6 @@ nav a:active {
 }
 
 /* sidebar navbar for mobile */
-
 .sidebar {
     position: fixed;
     top: 0;
@@ -114,6 +113,20 @@ header {
     box-shadow: 5px 5px 2px #000;
     overflow: wrap;
     padding: 50px;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fallIn 1s ease-out forwards;
+}
+
+@keyframes fallIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .introduction-text {
@@ -123,7 +136,7 @@ header {
     align-items: center !important;
     width: 65%;
     height: 100%;
-    margin: 80px auto;
+    margin: 20px auto;
 }
 
 #hero h2 {
@@ -136,6 +149,18 @@ header {
 
 #hero p {
     font-size: 24px;
+}
+
+#hero .education {
+    margin-top: 30px;
+}
+
+#hero .education h2{
+    font-family: 'Bebas Neue', 'Metrophobic', 'Roboto', 'Open Sans', 'Arial';
+}
+
+#hero .date {
+    font-size: 20px;
 }
 
 .short-description {
@@ -157,26 +182,195 @@ header {
     margin: 20px 30px 30px 50px;
 }
 
+.portrait:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.8);
+    transition: all 0.5s ease;
+}
+
 .section-title {
     font-family: 'Bebas Neue', 'Roboto', 'Open Sans', 'Arial';
 }
 
+/* about me section */
 #about {
     display: block;
-    position: relative;
     width: 100%;
+    margin: 0px auto;
+    padding: 20px 0px;
     background-color: #fff;
-    margin: 0 auto;
-    padding: 30px;
+}
+
+#about .text-content {
+    margin: 0px 30px;
 }
 
 #about p {
-    width: 100%;
     font-family: 'Roboto', 'Open Sans', 'Arial';
     line-height: 22px;
     margin: 10px auto;
+    width: 100%;
+    text-align: justify;
+    overflow: hidden;
 }
 
+/* experience section */
+#experience {
+    background-color: #f2f2f2;
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+    padding: 20px 0px;
+}
+
+#experience .text-content {
+    margin: 0px 30px;
+}
+
+#experience h2 {
+    margin: 10px auto;
+}
+
+#experience h3 {
+    font-family: 'Metrophobic', 'Open Sans', 'Arial';
+    margin: 0px;
+}
+
+#experience ul {
+    margin: 10px 30px;
+    font-family: 'Roboto', 'Open Sans', 'Arial';
+}
+
+/* skills and tools section */
+#skills-and-tools {
+    display: block;
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0px auto;
+    padding: 20px 0px;
+    font-family: 'Bebas Neue', 'Roboto', 'Open Sans', 'Arial';
+    font-size: 20px;
+}
+
+#skills-and-tools h2, h3 {
+    margin: 8px 30px;
+}
+
+#skills-and-tools img {
+    height: 75px;
+}
+
+#skills-and-tools figure {
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.toolset {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 0.5em 25px;
+}
+
+/* contact form */
+#contact-message-form {
+    display: block;
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 25px 0px;
+    line-height: 2.2em;
+}
+
+#contact-message-form .contact-title, form {
+    font-family: 'Bebas Neue', 'Roboto', 'Open Sans', 'Arial';
+    margin-left: 20px;
+}
+
+#contact-message-form p {
+    font-family: 'Roboto', 'Open Sans', 'Arial';
+}
+
+#contact-message-form .contact-title {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+#contact-message-form hr {
+    border: none;
+    width: 500px;
+    height: 5px;
+    background-color: #0d0d0d;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+#contact-message-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 25px;
+    outline: #000;
+    font-weight: 500;
+    border: 1px solid hsla(0, 0%, 30%, 0.4);
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 15px;
+    font-family: 'Roboto', 'Open Sans', 'Arial';
+}
+
+#contact-message-form label {
+    font-size: 20px;
+}
+
+.contact-inputs:focus {
+    border: 1px solid #0f0f0f;
+}
+
+.contact-inputs::placeholder {
+    color: #a1a1a1;
+}
+
+#contact-message-form textarea {
+    height: 200px;
+    width: 500px;
+    padding-top: 5px;
+}
+
+#contact-message-form button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-family: 'Bebas Neue', 'Roboto', 'Open Sans', 'Arial';
+    color: #000;
+    gap: 10px;
+    border: 1px solid #a9a9a9;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px;
+    background: linear-gradient(155deg, #0f0f0f, #a9a9a9, #fff, #a9a9a9, #fff);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#contact-message-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.288);
+    transition: all 0.5s ease;
+}
+
+#contact-message-form button img {
+    height: 30px;
+}
+
+/* footer with contact information*/
 footer {
     display: block;
     background-color: #f0f0f0f0;
@@ -185,12 +379,35 @@ footer {
     left: 0;
     width: 100%;
     min-height: 100%;
+    margin: auto;
+    padding: 20px 0px;
+    opacity: 90%
 }
 
 .contact-information {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     align-items: center;
+    gap: 5px;
     font-family: 'Bebas Neue';
     font-size: 20px;
     text-align: center;
+}
+
+.media-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.contact-information img {
+    height: 40px;
+}
+
+.contact-information a {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;;
 }
